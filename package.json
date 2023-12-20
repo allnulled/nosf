@@ -1,28 +1,39 @@
 {
-    "name": "nodejs-os-scripting-framework",
-    "version": "1.0.2",
-    "description": "",
-    "main": "src/nosf.js",
-    "scripts": {
-        "test": "mocha test/test.js"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "devDependencies": {
-        "chai": "^4.3.10",
-        "mocha": "^10.2.0",
-        "nyc": "^15.1.0"
-    },
-    "dependencies": {
-        "adm-zip": "^0.5.10",
-        "chalk": "^5.3.0",
-        "download": "^8.0.0",
-        "fs-extra": "^11.2.0",
-        "globby": "^14.0.0",
-        "readline-sync": "^1.4.10",
-        "which": "^4.0.0",
-        "xlsx": "^0.18.5"
-    },
-    "uuid_commit": 2
+  "name": "nodejs-os-scripting-framework",
+  "version": "1.0.2",
+  "description": "The **Node.js OS Scripting Framework** is a kit of utilities and packages to elaborate *(Node.js-based)* scripts for the operative system.",
+  "main": "src/nosf.js",
+  "scripts": {
+    "test": "mocha test/test.js"
+  },
+  "keywords": [],
+  "author": "allnulled",
+  "license": "WTFPL",
+  "devDependencies": {
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.10",
+    "chalk": "^5.3.0",
+    "download": "^8.0.0",
+    "fs-extra": "^11.2.0",
+    "globby": "^14.0.0",
+    "readline-sync": "^1.4.10",
+    "which": "^4.0.0",
+    "xlsx": "^0.18.5"
+  },
+  "uuid_commit": 2,
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allnulled/nosf.git"
+  },
+  "bugs": {
+    "url": "https://github.com/allnulled/nosf/issues"
+  },
+  "homepage": "https://github.com/allnulled/nosf#readme"
 }

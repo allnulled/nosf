@@ -68,4 +68,4 @@ You can find also the functions:
 
 ## Tests
 
-Take a look to the `test/test.js` file to see them in action in a fast mocha test.
+Take a look to the [`test/test.js`](./test/test.js) file to see them in action in a fast mocha test.

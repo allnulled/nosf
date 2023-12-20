@@ -1,6 +1,12 @@
-# nosf
+# nodejs-os-scripting-framework
 
-**NOSF** stands for **Node.js OS Scripting Framework**. Kit of utilities and packages to elaborate *(Node.js-based)* scripts for the operative system.
+The **Node.js OS Scripting Framework** is a kit of utilities and packages to elaborate *(Node.js-based)* scripts for the operative system.
+
+## Installation
+
+```sh
+npm install --save nodejs-os-scripting-framework
+```
 
 ## Explanation
 
@@ -58,7 +64,7 @@ const {
   readlineSync,
   which,
   xlsx,
-} = require("nosf");
+} = require("nodejs-os-scripting-framework");
 ```
 
 You can find also the functions:

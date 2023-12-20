@@ -22,7 +22,7 @@ const Nosf = {};
  * @returns `stdout:String` The string of stdout.
  * 
  */
-Nosf.executeSync = function(...args) {
+Nosf.executeSync = function (...args) {
   return child_process.execSync(...args).toString();
 };
 
@@ -35,14 +35,48 @@ Nosf.executeSync = function(...args) {
  * @returns `stdout:Promise<String>` A promise with the string of stdout.
  * 
  */
-Nosf.executeAsync = function(...args) {
-  return executeAsync(...args).then(function(value) {
+Nosf.executeAsync = function (...args) {
+  return executeAsync(...args).then(function (value) {
     const { stdout, stderr } = value;
-    if(stderr) {
+    if (stderr) {
       throw stderr;
     }
     return stdout;
   });
+};
+
+/**
+ * 
+ * @type Function
+ * @name Nosf.findFilesAsync(patterns, options)
+ * @param `patterns:Array<String>`
+ * @param `options:Object` 
+ * @returns `results:Promise<Array<String>>`
+ * 
+ */
+Nosf.findFilesAsync = async function (patterns, options) {
+  const { globby } = Nosf;
+  const usableGlobby = await globby;
+  const results = await usableGlobby.globby(patterns, options);
+  return results;
+};
+
+/**
+ * 
+ * @type Function
+ * @name Nosf.dumpToExcel(file, data)
+ * @param `file:String` 
+ * @param `data:Array<Object>`
+ * @returns `results:Promise<Object>` Returns the resulting workbook.
+ * 
+ */
+Nosf.dumpToExcel = function (file, data) {
+  const { xlsx } = Nosf;
+  const worksheet = xlsx.utils.json_to_sheet(data);
+  const workbook = xlsx.utils.book_new();
+  xlsx.utils.book_append_sheet(workbook, worksheet, "Unique_sheet");
+  xlsx.writeFile(workbook, file);
+  return workbook;
 };
 
 /**

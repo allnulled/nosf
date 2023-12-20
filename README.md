@@ -65,3 +65,7 @@ You can find also the functions:
 
 - `nosf.executeSync(command, options)`
 - `nosf.executeAsync(command, options)`
+
+## Tests
+
+Take a look to the `test/test.js` file to see them in action in a fast mocha test.

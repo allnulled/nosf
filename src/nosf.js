@@ -3,6 +3,7 @@ const util = require("util");
 const promisify = util.promisify;
 const executeAsync = promisify(require("child_process").exec);
 const fsExtra = require("fs-extra");
+const cliTable = require("cli-table");
 const download = require("download");
 const readlineSync = require("readline-sync");
 const globby = import("globby");
@@ -160,6 +161,14 @@ Nosf.inquirer = inquirer;
  * 
  */
 Nosf.spinnies = spinnies;
+
+/**
+ * 
+ * @name Nosf.cliTable
+ * @module require("cli-table")
+ * 
+ */
+Nosf.cliTable = cliTable;
 
 
 Nosf.load = async function() {

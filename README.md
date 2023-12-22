@@ -14,6 +14,7 @@ This package is a unification of some of the most used utilities in Node.js when
 
  - [adm-zip](https://www.npmjs.com/package/adm-zip): to zip and unzip files.
  - [chalk](https://www.npmjs.com/package/chalk): to print colors by console.
+ - [cli-table](https://www.npmjs.com/package/cli-table): to print tables by console.
  - [download](https://www.npmjs.com/package/download): to download files from the net.
  - [fs-extra](https://www.npmjs.com/package/fs-extra): to carry complex filesystem operations easily.
  - [globby](https://www.npmjs.com/package/globby): to find files by glob patterns.
@@ -46,6 +47,7 @@ The references of the included packages are on:
 
  - [https://www.npmjs.com/package/adm-zip](https://www.npmjs.com/package/adm-zip)
  - [https://www.npmjs.com/package/chalk](https://www.npmjs.com/package/chalk)
+ - [https://www.npmjs.com/package/cli-table](https://www.npmjs.com/package/cli-table)
  - [https://www.npmjs.com/package/download](https://www.npmjs.com/package/download)
  - [https://www.npmjs.com/package/fs-extra](https://www.npmjs.com/package/fs-extra)
  - [https://www.npmjs.com/package/globby](https://www.npmjs.com/package/globby)
@@ -65,6 +67,7 @@ await nosf.load(); // Esta línea normaliza los imports de algunos paquetes
 const {
   admZip,
   chalk,
+  cliTable
   download,
   fsExtra,
   globby,

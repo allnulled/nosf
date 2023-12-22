@@ -17,6 +17,7 @@
     "dependencies": {
         "adm-zip": "^0.5.10",
         "chalk": "^5.3.0",
+        "cli-table": "^0.3.11",
         "download": "^8.0.0",
         "fs-extra": "^11.2.0",
         "globby": "^14.0.0",

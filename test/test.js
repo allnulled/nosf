@@ -133,4 +133,17 @@ describe("Test for NOSF", function() {
             spinnies.fail('spinner-2', { text: 'Fail :(' });
         }, 2000);
     });
+    it("can use «cli-table» package", async function() {
+        this.timeout(10 * 1000);
+        let { cliTable } = nosf;
+        const table = new cliTable({
+            head: ["Nombre", "Edad"]
+        });
+        table.push(
+            ["Carl", 33],
+            ["Codos", 40],
+            ["Matusalen", 900]
+        );
+        console.log(table.toString());
+    });
 });

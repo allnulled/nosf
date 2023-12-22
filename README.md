@@ -1,6 +1,6 @@
 # nodejs-os-scripting-framework
 
-The **Node.js OS Scripting Framework** is a kit of utilities and packages to elaborate *(Node.js-based)* scripts for the operative system.
+The **Node.js OS Scripting Framework** is a kit of utilities and packages to elabspinnieste *(Node.js-based)* scripts for the operative system.
 
 ## Installation
 
@@ -17,7 +17,9 @@ This package is a unification of some of the most used utilities in Node.js when
  - [download](https://www.npmjs.com/package/download): to download files from the net.
  - [fs-extra](https://www.npmjs.com/package/fs-extra): to carry complex filesystem operations easily.
  - [globby](https://www.npmjs.com/package/globby): to find files by glob patterns.
+ - [inquirer](https://www.npmjs.com/package/inquirer): to have a kit of complex user inputs.
  - [readline-sync](https://www.npmjs.com/package/readline-sync): to ask user for inputs.
+ - [spinnies](https://www.npmjs.com/package/spinnies): to show spinners easily.
  - [which](https://www.npmjs.com/package/which): to find executables in the system, or not.
  - [xlsx](https://www.npmjs.com/package/xlsx): to read and write Excel files.
 
@@ -26,14 +28,16 @@ This package is a unification of some of the most used utilities in Node.js when
 The dependencies are the following:
 
 ```js
-    "adm-zip": "^0.5.10",
-    "chalk": "^5.3.0",
-    "download": "^8.0.0",
-    "fs-extra": "^11.2.0",
-    "globby": "^14.0.0",
-    "readline-sync": "^1.4.10",
-    "which": "^4.0.0",
-    "xlsx": "^0.18.5"
+  "adm-zip": "^0.5.10",
+  "chalk": "^5.3.0",
+  "download": "^8.0.0",
+  "fs-extra": "^11.2.0",
+  "globby": "^14.0.0",
+  "inquirer": "^9.2.12",
+  "readline-sync": "^1.4.10",
+  "spinnies": "^0.5.1",
+  "which": "^4.0.0",
+  "xlsx": "^0.18.5"
 ```
 
 ## References
@@ -45,7 +49,9 @@ The references of the included packages are on:
  - [https://www.npmjs.com/package/download](https://www.npmjs.com/package/download)
  - [https://www.npmjs.com/package/fs-extra](https://www.npmjs.com/package/fs-extra)
  - [https://www.npmjs.com/package/globby](https://www.npmjs.com/package/globby)
+ - [https://www.npmjs.com/package/inquirer](https://www.npmjs.com/package/inquirer)
  - [https://www.npmjs.com/package/readline-sync](https://www.npmjs.com/package/readline-sync)
+ - [https://www.npmjs.com/package/spinnies](https://www.npmjs.com/package/spinnies)
  - [https://www.npmjs.com/package/which](https://www.npmjs.com/package/which)
  - [https://www.npmjs.com/package/xlsx](https://www.npmjs.com/package/xlsx)
 
@@ -61,7 +67,9 @@ const {
   fsExtra,
   fs,      // same as fsExtra
   globby,
+  inquirer,
   readlineSync,
+  spinnies,
   which,
   xlsx,
 } = require("nodejs-os-scripting-framework");
@@ -71,6 +79,8 @@ You can find also the functions:
 
 - `nosf.executeSync(command, options)`
 - `nosf.executeAsync(command, options)`
+- `await nosf.findFilesAsync(glob_pattern)`
+- `await nosf.dumpToExcel(file, array_of_objects)`
 
 ## Tests
 

@@ -6,6 +6,8 @@ const fsExtra = require("fs-extra");
 const download = require("download");
 const readlineSync = require("readline-sync");
 const globby = import("globby");
+const inquirer = import("inquirer");
+const spinnies = require("spinnies");
 const which = require("which");
 const chalk = import("chalk");
 const xlsx = require("xlsx");
@@ -144,6 +146,30 @@ Nosf.xlsx = xlsx;
  */
 Nosf.admZip = admZip;
 
+/**
+ * 
+ * @name Nosf.inquirer
+ * @module require("inquirer")
+ * 
+ */
+Nosf.inquirer = inquirer;
+
+/**
+ * 
+ * @name Nosf.spinnies
+ * @module require("spinnies")
+ * 
+ */
+Nosf.spinnies = spinnies;
+
+
+Nosf.load = async function() {
+  try {
+    
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 Nosf.default = Nosf;
 module.exports = Nosf;

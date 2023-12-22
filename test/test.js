@@ -2,6 +2,9 @@ let nosf = require(__dirname + "/../src/nosf.js");;
 const { expect, assert } = require("chai");
 
 describe("Test for NOSF", function() {
+    it("can load everything", async function() {
+        await nosf.load();
+    });
     it("can use executeSync function", function() {
         const output = nosf.executeSync("echo 'This is a request'");
         expect(output).to.equal("This is a request\n");
@@ -100,5 +103,37 @@ describe("Test for NOSF", function() {
         let { readlineSync } = nosf;
         const answer = readlineSync.question("Are you there yet, user?");
         console.log(answer);
+    });
+    it("can use «inquirer» package", async function() {
+        this.timeout(10 * 1000);
+        let { inquirer } = nosf;
+        inquirer = await inquirer;
+        inquirer = inquirer.default;
+        const answers = await inquirer.prompt([{
+            name: "name",
+            message: "What is your name?"
+        }, {
+            name: "age",
+            message: "How old are you?"
+        }, {
+            name: "gender",
+            message: "What is your gender, male or female?",
+            choices: ["male", "female"]
+        }, {
+            name: "origin",
+            message: "Where do you come from?"
+        }]);
+        console.log(answers);
+    });
+    it("can use «spinnies» package", async function() {
+        this.timeout(10 * 1000);
+        let { spinnies: Spinnies } = nosf;
+        const spinnies = new Spinnies();
+        spinnies.add('spinner-1', { text: 'I am a spinner' });
+        spinnies.add('spinner-2', { text: 'I am another spinner' });
+        setTimeout(() => {
+            spinnies.succeed('spinner-1', { text: 'Success!' });
+            spinnies.fail('spinner-2', { text: 'Fail :(' });
+        }, 2000);
     });
 });

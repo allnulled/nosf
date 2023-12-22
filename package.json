@@ -1,6 +1,6 @@
 {
     "name": "nodejs-os-scripting-framework",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "The **Node.js OS Scripting Framework** is a kit of utilities and packages to elaborate *(Node.js-based)* scripts for the operative system.",
     "main": "src/nosf.js",
     "scripts": {

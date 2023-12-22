@@ -52,7 +52,6 @@ describe("Test for NOSF", function() {
     });
     it("can use «globby» package", async function() {
         let { globby } = nosf;
-        globby = await globby;
         const files = globby.globbySync(__dirname + "/files/file-{one,two,three}.txt");
         expect(files.length).to.equal(3);
     });
@@ -65,7 +64,6 @@ describe("Test for NOSF", function() {
     });
     it("can use «chalk» package", async function() {
         let { chalk } = nosf;
-        chalk = await chalk;
         chalk = await new chalk.Chalk();
         console.log(chalk.red.bold("Hello in red and bold color!"));
     });
@@ -107,8 +105,6 @@ describe("Test for NOSF", function() {
     it("can use «inquirer» package", async function() {
         this.timeout(30 * 1000);
         let { inquirer } = nosf;
-        inquirer = await inquirer;
-        inquirer = inquirer.default;
         const answers = await inquirer.prompt([{
             name: "name",
             message: "What is your name?"

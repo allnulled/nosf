@@ -58,8 +58,7 @@ Nosf.executeAsync = function (...args) {
  */
 Nosf.findFilesAsync = async function (patterns, options) {
   const { globby } = Nosf;
-  const usableGlobby = await globby;
-  const results = await usableGlobby.globby(patterns, options);
+  const results = await globby.globby(patterns, options);
   return results;
 };
 
@@ -165,7 +164,22 @@ Nosf.spinnies = spinnies;
 
 Nosf.load = async function() {
   try {
-    
+    load_inquirer: {
+      let { inquirer } = Nosf;
+      inquirer = await inquirer;
+      Nosf.inquirer = inquirer.default;
+    };
+    load_chalk: {
+      let { chalk } = Nosf;
+      chalk = await chalk;
+      Nosf.chalk = chalk;
+    };
+    load_globby: {
+      let { globby } = Nosf;
+      globby = await globby;
+      Nosf.globby = globby;
+    };
+    return Nosf;
   } catch (error) {
     console.log(error);
   }

@@ -60,19 +60,20 @@ The references of the included packages are on:
 To use any of these packages, you can directly:
 
 ```js
+const nosf = require("nodejs-os-scripting-framework");
+await nosf.load(); // Esta línea normaliza los imports de algunos paquetes
 const {
   admZip,
   chalk,
   download,
   fsExtra,
-  fs,      // same as fsExtra
   globby,
   inquirer,
   readlineSync,
   spinnies,
   which,
   xlsx,
-} = require("nodejs-os-scripting-framework");
+} = nosf;
 ```
 
 You can find also the functions:

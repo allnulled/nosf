@@ -1,6 +1,6 @@
 # nodejs-os-scripting-framework
 
-The **Node.js OS Scripting Framework** is a kit of utilities and packages to elabspinnieste *(Node.js-based)* scripts for the operative system.
+The **Node.js OS Scripting Framework** is a kit of utilities and packages to write *Node.js-based scripts* for the *operative system*.
 
 ## Installation
 

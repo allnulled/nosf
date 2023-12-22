@@ -105,7 +105,7 @@ describe("Test for NOSF", function() {
         console.log(answer);
     });
     it("can use «inquirer» package", async function() {
-        this.timeout(10 * 1000);
+        this.timeout(30 * 1000);
         let { inquirer } = nosf;
         inquirer = await inquirer;
         inquirer = inquirer.default;
@@ -116,6 +116,7 @@ describe("Test for NOSF", function() {
             name: "age",
             message: "How old are you?"
         }, {
+            type: "list",
             name: "gender",
             message: "What is your gender, male or female?",
             choices: ["male", "female"]
